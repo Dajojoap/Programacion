@@ -1,1 +1,18 @@
 #Problema 1
+
+import math
+ 
+def X_Cuadrado(x,y):
+    z= x**y
+    print(f"este es el resultado de la funcion:{z}")
+
+ 
+def area_circulo(r):
+     Result=math.pi *X_Cuadrado(r,2)
+     print("este es el area del circulo",Result)
+     Result = math.pi * X_Cuadrado(r,2)
+     #result=math.pi * r**2
+ 
+     print("este es el area del circulo", Result)
+ 
+area_circulo=10
