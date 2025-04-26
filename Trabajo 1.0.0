@@ -20,9 +20,9 @@ def V_Cono(w,v,t):
 #si quieres saber el volumen de solo el cono, activa la siguiente linea de codigo y desactiva la linea 17 return
 # print(f"este es el volumen del cono: {v2}")
 
-V_Cono(4,2,9/2)
+V_Cono(4,2,9//2)
 
 #suma de los 2 volumenes para obtener el volumen total del solido
 #este comando solo funciona si las lineas 7 y 12 estan activadas, mas las lineas 9 y 19 tienen que estar desactivadas
 
-print(V_Cono(4,2,9/2)+V_Esfera(3,3))
+print(V_Cono(4,2,9//2)+V_Esfera(3,3))
