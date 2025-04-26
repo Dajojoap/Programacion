@@ -1,9 +1,20 @@
-#Problema 1
 
 import math
 
+#Volumen de la esfera
 def V_Esfera(x,y):
     z=4*math.pi*x**y/3
-    print(f"este es resultado de la funcion: {z}")
-    
+    return z
+ 
 V_Esfera(3,3)
+
+#Volumen Cono
+
+def V_Cono(w,v,t):
+    v2=math.pi*w**v*t
+    return v2
+
+V_Cono(4,2,9/2)
+
+print(V_Cono(4,2,9/2)+V_Esfera(3,3))
+
