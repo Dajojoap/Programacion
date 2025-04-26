@@ -1,19 +1,10 @@
 #Problema 1
+#Este es la funcion para el volumen de la esfera, tenemos que sumarle el volumen del cono para obtener el de la figura completa :)
 
 import math
 
-def X_Cuadrado(x,y):
-    z= x**y
-    print(f"este es el resultado de la funcion:{z}")
-
- #ejemplo2
- 
-def area_circulo(r):
-     Result=math.pi *X_Cuadrado(r,2)
-     print("este es el area del circulo",Result)
-     Result = math.pi * X_Cuadrado(r,2)
-     #result=math.pi * r**2
- 
-     print("este es el area del circulo", Result)
- 
-area_circulo=10
+def V_Esfera(x,y):
+    z=4*math.pi*x**y/3
+    print(f"este es resultado de la funcion: {z}")
+    
+V_Esfera(3,3)
