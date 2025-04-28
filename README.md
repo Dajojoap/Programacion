@@ -20,3 +20,6 @@
 
 #problema 5
 ![Image](https://github.com/user-attachments/assets/36d78757-ebfc-4334-bd8f-fb429103c24a)
+
+#problema 6
+![Image](https://github.com/user-attachments/assets/347158ea-aa08-4e74-8458-791cf3023317)
