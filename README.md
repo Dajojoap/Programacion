@@ -17,3 +17,6 @@
 
 #problema 4
 ![Image](https://github.com/user-attachments/assets/69fba381-cfa0-4508-b85d-231d8a7a22ed)
+
+#problema 5
+![Image](https://github.com/user-attachments/assets/36d78757-ebfc-4334-bd8f-fb429103c24a)
