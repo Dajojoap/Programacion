@@ -8,3 +8,6 @@
 
 #problema con los valores r1=3, h=9//2, r2=4
 ![Image](https://github.com/user-attachments/assets/16d5aa19-8d1d-4a30-a41c-2b1bbfd0c1ac)
+
+#problema 2 con valores a=1 b=2 r=1.5
+![Image](https://github.com/user-attachments/assets/9a2e4bc6-9633-47bc-b789-39189bc5153c)
