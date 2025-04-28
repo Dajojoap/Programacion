@@ -28,30 +28,35 @@ V_Cono(4,2,9/2)
 print("el volumen del solido es :", V_Cono(4,2,9/2)+V_Esfera(3,3),"metros cubicos")
 
 #Problema 2
-#Calcula el área lateral de un vagón compuesto por un rectángulo y 2 semicirculos
-
 import math
 
-def area_total_vagon_1(a, b, r):
-   area_rectangulo = a * b
-   area_circulo = math.pi * (r ** 2)
-   area_total = area_rectangulo + area_circulo
-   return area_total
+#Area del rectangulo
+def Area_rectangulo(a,b):
+    a_rectangulo=a*b
+    return a_rectangulo
+#si quieres saber el volumen de solo el rectangulo, activa la siguiente linea de codigo y desactiva la linea 36 return
+# print(f"este es el area del rectangulo: {a_rectangulo}")
+    
+Area_rectangulo(2,10)
 
-# valores
-a = 4    # altura en metros
-b = 10   # base en metros
-r = 1.5  # radio en metros
+#Area de los circulos
 
-# Cálculo del área
-area_total = area_total_vagon_1(a, b, r)
+def Area_circulos(r):
+    a_circulos=2 * math.pi * r**2
+    return a_circulos
+#si quieres saber el volumen de solo los circulos, activa la siguiente linea de codigo y desactiva la linea 46 return
+# print(f"este es el volumen de los 2 circulos: {a_circulos}")
 
-# Resultado
-print(f"El área lateral del vagón es: {area_total} metros cuadrados")
+Area_circulos(3)
+
+#suma de las 2 areas anteriores para obtener el area total
+#este comando solo funciona si las lineas 36 y 46 estan activadas, mas las lineas 38 y 48 tienen que estar desactivadas
+
+print("el volumen del solido es :", Area_rectangulo(2,10)+Area_circulos(3), "metros cuadrados")
 
 #problema 3
 
-import math
+
 
 def area_total_vagon_2(c,d,e,f,g,h):
   area_rectangulo_1 = c * d
@@ -72,7 +77,7 @@ h = 4.5  # radio en metros(r2)
 # Cálculo del área
 area_t_v_2 = area_total_vagon_2(c,d,e,f,g,h)
 
-print(f"El área lateral del vagón es: {area_t_v_2} metros cuadrados")
+print(f"El area total del vagón es: {area_t_v_2} metros cuadrados")
 
 #problema 3.1
 
