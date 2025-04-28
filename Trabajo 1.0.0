@@ -25,4 +25,118 @@ V_Cono(4,2,9/2)
 #suma de los 2 volumenes para obtener el volumen total del solido
 #este comando solo funciona si las lineas 7 y 12 estan activadas, mas las lineas 9 y 19 tienen que estar desactivadas
 
-print(V_Cono(4,2,9/2)+V_Esfera(3,3))
+print("el volumen del solido es :", V_Cono(4,2,9/2)+V_Esfera(3,3),"metros cubicos")
+
+#Problema 2
+#Calcula el área lateral de un vagón compuesto por un rectángulo y 2 semicirculos
+
+import math
+
+def area_total_vagon_1(a, b, r):
+   area_rectangulo = a * b
+   area_circulo = math.pi * (r ** 2)
+   area_total = area_rectangulo + area_circulo
+   return area_total
+
+# valores
+a = 4    # altura en metros
+b = 10   # base en metros
+r = 1.5  # radio en metros
+
+# Cálculo del área
+area_total = area_total_vagon_1(a, b, r)
+
+# Resultado
+print(f"El área lateral del vagón es: {area_total} metros cuadrados")
+
+#problema 3
+
+import math
+
+def area_total_vagon_2(c,d,e,f,g,h):
+  area_rectangulo_1 = c * d
+  area_rectangulo_2 = e * f
+  area_circulo_1 = math.pi * (g ** 2)
+  area_circulo_2 = math.pi * (h ** 2)
+  area_total = area_rectangulo_1+area_rectangulo_2+area_circulo_1+area_circulo_2
+  return area_total
+
+# Datos dados
+c = 10    # altura en metros(a2)
+d = 5   # base en metros(b2)
+e = 14    # altura en metros(a1)
+f = 6   # base en metros(b1)
+g = 6.5  # radio en metros(r1)
+h = 4.5  # radio en metros(r2)
+
+# Cálculo del área
+area_t_v_2 = area_total_vagon_2(c,d,e,f,g,h)
+
+print(f"El área lateral del vagón es: {area_t_v_2} metros cuadrados")
+
+#problema 3.1
+
+N=float(input("inserte aqui la cantidad de gallinas que tiene: "))
+M=float(input("inserte aqui la cantidad de gallos que tiene: "))
+K=float(input("inserte aqui la cantidad de pollitos que tiene: "))
+
+def Kg_aves(N,M,K):
+   p_c_gallinas=N*6
+   p_c_gallos=M*7
+   p_c_pollitos=K*1
+   P_total=p_c_gallinas+p_c_gallos+p_c_pollitos
+   return (P_total)
+
+Kg_aves(N,M,K)
+
+print(f"esta es la cantidad de carne de aves en kilos que se tiene con los datos dados anteriormente:{Kg_aves(N,M,K)} Kg ")
+
+#problema 3.2
+
+P=int(input("inserte el numero de panes a comprar: "))
+B=int(input("inserte el numero de bolsas a comprar: "))
+H=int(input("inserte el numero de huevos a comprar: "))
+
+def Precio(P,B,H):
+   P_panes=P*300
+   P_bolsas=B*3300
+   P_Huevos=H*350
+   Pesos_totales=P_Huevos+P_bolsas+P_panes
+   return(Pesos_totales)
+
+Precio(P,B,H)
+print(f"este es su total en pesos:{Precio(P,B,H)} $COP")
+
+V=int(input("¿con cuanto va a pagar?: "))
+
+def vueltas(V):
+   Vueltas_P=V-Precio(P,B,H)
+   return(Vueltas_P)
+
+vueltas(V)
+print(f"este es su regreso:{vueltas(V)} $COP")
+
+#problema 3.3
+
+Pesos=int(input("este es la cantidad de pesos que usted quiere pedir: "))
+Interes=3
+
+def prestamo_P(Pesos,Interes):
+   Pr_I_M=(Pesos * Interes) / 100
+   Pr_I_2M=2*Pr_I_M
+   Pr_total=Pesos+Pr_I_2M
+   return(Pr_total)
+
+prestamo_P(Pesos,Interes)
+print(f"esta cantidad de pesos debera pagar al final del segundo mes:{prestamo_P(Pesos,Interes)} $COP")
+
+#problema 3.4
+C_A=int(input("este es el numero de contagiados actuales: "))
+D=int(input("este es el numero de dias que han pasado desde que se conoce el numero de infectadoa actuales: "))
+
+def Contagios_CV19(C_A,D):
+   Cv19_total=D*(C_A*2)
+   return(Cv19_total)
+
+Contagios_CV19(C_A,D)
+print(f"este es la cantidad de contagiados que se va a tener si pasan {D} dias, {Contagios_CV19(C_A,D)} contagios totales")
