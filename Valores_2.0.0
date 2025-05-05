@@ -1,0 +1,124 @@
+#ejercicio 17
+#Sume los cuadrados de los cien primeros numeros naturales
+
+suma = 0  
+
+for i in range(1, 101):
+    suma += i ** 2
+
+print(f"La suma de los cuadrados de los 100 primeros numeros naturales es {suma}")
+
+#Ejercicio 18
+# Programa para sumar los 100 números siguientes a uno dado
+
+numero = int(input("Ingrese un número entero: "))
+
+# Verificamos que sea un número positivo (ejemplo de uso de 'if')
+if numero >= 0:
+    suma = 0
+    for i in range(numero + 1, numero + 101):
+        suma += i
+    print(f"La suma de los 100 números siguientes a {numero} es: {suma}")
+else:
+    print("Por favor, ingrese un número entero positivo: ")
+
+#ejercicio 19
+# Conversor de Euros a Dólares con validación usando el condicional if
+
+# Tasa de conversión 
+tasa_cambio = 1.13
+
+# Pedir al usuario la cantidad en euros
+euros = float(input("ingrese la cantidad de dinero en euros: "))
+
+# Validar que el monto sea positivo
+if euros > 0:
+    dolares_usa = euros * tasa_cambio
+    print(f"{euros:.2f} euros equivalen a {dolares_usa:.2f} dólares estadounidenses.")
+else:
+    print("Por favor, ingrese una cantidad de dinero positiva de euros.")
+
+#ejercicio 20
+#Calculadora simple del area de un rectangulo con condicional if
+
+#Solicitar datos a la consola
+alto = float(input("Ingrese la altura del rectangulo (en metros): "))
+ancho = float(input("Ingrese la anchura del rectangulo (en metros): "))
+
+#Validar que los datos sean positivos
+if alto > 0 and ancho > 0:
+    area = alto * ancho    
+    print(f"El area del rectangulo es: {area:.2f} metros cuadrados.")
+else:
+    print("Error: La altura y la anchura deben ser numeros positivos.")
+
+#ejercicio 21
+#Comparar dos numeros dados por consola y retornar quien es mayor y cual es menor.
+
+#Pedir al usuario los dos numeros
+Num1 = float(input("Ingrese el primer numero: "))
+Num2 = float(input("Ingrese el segundo numero: "))
+
+#Comparar los nUmeros 
+if Num1 > Num2:
+    print(f"El numero mayor es: {Num1}")
+    print(f"El numero menor es: {Num2}")
+elif Num2 > Num1:
+    print(f"El numero mayor es: {Num2}")
+    print(f"El numero menor es: {Num1}")
+else:
+    print("Ambos numeros son de igual valor.")
+
+#ejercicio 22
+#Mostrar todos los numeros de valor anterior, que sean impares al numero dado por consola
+
+numero = int(input("Ingrese un numero:"))
+
+impares = []
+ 
+for i in range(1, numero):
+    if i % 2 != 0:  #Si el residuo de dividir entre 2 es distinto a 0 es impar
+     
+     impares.append(i) 
+
+print(f"Estos son los numeros impares de menor valor a: {numero}:")
+print(impares)
+
+#ejercicio 23
+#Algoritmo de euclides para encontrar el MCD (Máximo Común Divisor) de los numeros ingresados por consola
+
+a = int(input("Ingrese el primer numero: "))
+b = int(input("Ingrese el segundo numero: "))
+
+#Aplicar el algoritmo de Euclides
+while b != 0:
+    a, b = b, a % b
+
+print(f"El maximo comun divisor (MCD) es: {a}")
+
+#ejercicio 24
+#programa que lee los coeficientes de a,b y c de una ecuacion de segundo grado, que diga si tiene resultado o no, en el que caso de que si tenga, que lo calcule y lo imprima en la consola
+
+import math
+
+a = float(input("Ingrese un numero que tomara el valor a: "))
+b = float(input("Ingrese un numero que tomara el valor b: "))
+c = float(input("Ingrese un unmero que tomara el valor c: "))
+
+#Verificar que no sea una ecuacion de primer grado
+if a == 0:
+    print("El valor de a no puede ser cero en una ecuacion de segundo grado.")
+else:
+#Calcular discriminante para calcular las soluciones
+    discriminante = b**2 - 4*a*c
+    
+#Calcule los valores y diga si tiene solucion, 1 solucion, 2 soluciones o una solucion nula
+    if discriminante > 0:
+        r1 = (-b + math.sqrt(discriminante)) / (2*a)
+        r2 = (-b - math.sqrt(discriminante)) / (2*a)
+        print(f"Una ecuacion con los valores dados tiene dos soluciones reales distintas: solucion1 = {r1}, solucion2 = {r2}")
+    elif discriminante == 0:
+        x = -b / (2*a)
+        print(f"Una ecuacion con los valores dados tiene una solución real: x = {x}")
+    else:
+        print("Una ecuacion con los valores dados no tiene soluciones reales (gracias al discriminante negativo).")
