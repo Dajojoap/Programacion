@@ -48,3 +48,4 @@ else:
 
     # Paso 4: Cuando B supera a A, lo informamos
     print("El país B superará en población al país A en el año", anio)
+
