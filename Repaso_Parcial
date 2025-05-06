@@ -1,0 +1,50 @@
+#imprimir el cuadrado de un numero que se ingrese por consola mientras este no sea negativo
+
+#el valor del bloque "numero" se ingresa como un input que se introduce en la consola, la cñase float se usa para convertir lo que ingrese el usuario de un string a valor numerico
+numero=float(input("ingrese un numero del cual quiera conocer su valor al cuadrado: ")) 
+
+#se usa con los condicionales if y else para ver si el numero ingresado por consola es de valor positivo, si es asi se hace el cuadrado de este
+#si el numero no es de valor positivo, se pasara al condicional if, donde este imprimira en la consola para que el usuario ingrese un valor positivo.
+if numero > 0:
+    cuadrado= numero**2
+    print(f"el cuadrado del numero {numero} es {cuadrado}")
+else:
+    print("porfavor ingrese un numero con valor positivo")
+
+#desarrolle un programa que dado un numero entero positivo, imprima el n/2 si es par, si es impar  3n+1, el programa debe repetir el proceso hasta que el numero sea igual a 1
+
+
+n = int(input("Introduce un número entero positivo: "))
+
+# Verificamos que el número sea mayor a 0
+if n <= 0:
+    print("El número debe ser mayor a cero")
+else:
+    # Imprimimos los números en una sola línea
+    while n != 1:
+        print(n, end=" ")  # Imprime n seguido de un espacio
+        if n % 2 == 0:
+            n = n // 2     # División entera por 2 si es par
+        else:
+            n = 3 * n + 1  # 3n + 1 si es impar
+    print(1)  # Finalmente imprimimos el 1
+
+#mayor que con porciento
+
+# Paso 1: Definir las poblaciones iniciales y el año
+poblacion_A = 25.0    # millones
+poblacion_B = 18.9    # millones
+anio = 2022
+
+# Paso 2: Verificar si B ya es mayor antes de entrar al bucle
+if poblacion_B > poblacion_A:
+    print("El país B ya tiene una población mayor que el país A en el año", anio)
+else:
+    # Paso 3: Mientras B no haya superado a A, seguir creciendo año a año
+    while poblacion_B <= poblacion_A:
+        poblacion_A = poblacion_A * 1.02  # A crece 2%
+        poblacion_B = poblacion_B * 1.03  # B crece 3%
+        anio += 1
+
+    # Paso 4: Cuando B supera a A, lo informamos
+    print("El país B superará en población al país A en el año", anio)
